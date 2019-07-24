@@ -1,0 +1,25 @@
+{
+  "name": "react-reorder-images",
+  "version": "1.0.0",
+  "description": "React component to reorder images ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syadav214/react-reorder-images.git"
+  },
+  "keywords": [
+    "reactjs",
+    "js",
+    "reorder",
+    "images"
+  ],
+  "author": "Santoshkumar Yadav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syadav214/react-reorder-images/issues"
+  },
+  "homepage": "https://github.com/syadav214/react-reorder-images#readme"
+}
