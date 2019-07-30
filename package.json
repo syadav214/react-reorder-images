@@ -2,9 +2,14 @@
   "name": "react-reorder-images",
   "version": "1.0.0",
   "description": "React component to reorder images ",
-  "main": "index.js",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.8.6"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,5 +26,21 @@
   "bugs": {
     "url": "https://github.com/syadav214/react-reorder-images/issues"
   },
-  "homepage": "https://github.com/syadav214/react-reorder-images#readme"
+  "homepage": "https://github.com/syadav214/react-reorder-images#readme",
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-object-assign": "^7.0.0",
+    "@babel/plugin-transform-react-jsx": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "8.0.4",
+    "webpack": "4.26.1",
+    "webpack-cli": "3.1.2"
+  }
 }
