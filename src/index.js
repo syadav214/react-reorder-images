@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class ReorderImages extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class ReorderImages extends Component {
 
   imageDragOver = ev => ev.preventDefault();
 
-  imageDragStart = ev => this.dragId = ev.target.id; 
+  imageDragStart = ev => (this.dragId = ev.target.id);
 
   dropImage = ev => {
     ev.preventDefault();
@@ -29,12 +29,12 @@ class ReorderImages extends Component {
     }
 
     if (dragIndex !== '' && dropIndex !== '') {
-        const { images } = this.state;
-        const dragObject = images[dragIndex];
-        images.splice(dragIndex, 1);
-        images.splice(dropIndex, 0, dragObject);
-        this.setState({ images });
-        this.props.callback(images);
+      const { images } = this.state;
+      const dragObject = images[dragIndex];
+      images.splice(dragIndex, 1);
+      images.splice(dropIndex, 0, dragObject);
+      this.setState({ images });
+      this.props.callback(images);
     }
   };
 
@@ -42,26 +42,28 @@ class ReorderImages extends Component {
     const { images } = this.state;
     return (
       <div>
-        {images && images.length > 0 &&
+        {images &&
+          images.length > 0 &&
           images.map((img, index) => {
             return (
               <div
-                className="col-lg-2 col-md-3 col-sm-6"
-                style={{padding:'20px'}}
+                className='col-lg-2 col-md-3 col-sm-6'
+                style={{ padding: '20px' }}
                 key={index}
-                id = {`${index}-div`}
+                id={`${index}-div`}
                 onDrop={this.dropImage}
                 onDragOver={this.imageDragOver}
               >
                 <img
-                  id = {`${index}-img`}
+                  id={`${index}-img`}
                   draggable={true}
                   onDragStart={this.imageDragStart}
-                  style={{width:'150px',height:'150px'}}
-                  alt="100%x190"
+                  style={{ width: '150px', height: '150px' }}
+                  alt='100%x190'
                   src={img.url}
-                  data-holder-rendered="true"
+                  data-holder-rendered='true'
                 />
+                <span>{img.caption}</span>
               </div>
             );
           })}
