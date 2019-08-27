@@ -1,7 +1,7 @@
 {
   "name": "react-reorder-images",
   "version": "1.0.0",
-  "description": "React component to reorder images ",
+  "description": "React component to reorder images styled in bootstrap",
   "main": "build/index.js",
   "peerDependencies": {
     "react": "^16.4.0",
